@@ -20,7 +20,16 @@ app.use(express.json());
 // -----------------------------
 // 1. Serve Frontend (built) files
 // -----------------------------
+
+import { fileURLToPath } from "url";
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const frontendDistPath = path.join(__dirname, "../dist");
+
+
 app.use(express.static(frontendDistPath));
 
 // Serve index.html for all SPA routes

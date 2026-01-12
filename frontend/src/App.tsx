@@ -294,7 +294,7 @@ async function scoreUrl(raw: string) {
 /* ----------  external check ---------- */
 async function realExternalLookup(url: string) {
   try {
-    const res = await fetch("http://localhost:5000/api/scan", {
+    const res = await fetch("http://localhoshttps://safelink-new-backend-production.up.railway.app/t:5000/api/scan", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url }),
